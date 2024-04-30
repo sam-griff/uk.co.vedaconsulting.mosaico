@@ -21,18 +21,8 @@
   <div class="form-group">
     <label for="inputFrom" ng-class="checkPerm('create mailings') ? 'control-label' : 'control-label required-mark'">{{ts('From')}}
       <a crm-ui-help="hs({id: 'from_email', title: ts('From')})"></a></label>
-    <div ng-controller="EmailAddrCtrl" crm-mailing-from-address="fromPlaceholder" crm-mailing="mailing">
-      <select
-          id="inputFrom"
-          class="form-control"
-          crm-ui-select="{dropdownAutoWidth : true, allowClear: false}"
-          name="fromAddress"
-          ng-model="fromPlaceholder.label"
-          required>
-        <option ng-repeat="frm in crmFromAddresses.getAll() | filter:{is_active:1} | orderBy:'weight'"
-                value="{{frm.label}}">{{frm.label}}
-        </option>
-      </select>
+    <div>
+      <crm-mosaico-from-list crm-mailing="mailing" />
     </div>
   </div>
 

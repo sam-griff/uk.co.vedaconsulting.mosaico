@@ -9,6 +9,9 @@
     const mainPlaceholders = {
       subject: 'VARIANT SUBJECTS',
       body_html: 'VARIANT HTMLS',
+      from_name: 'VARIANT FROM',
+      from_email: 'VARIANT@EXAMPLE.ORG',
+      replyto_email: '"VARIANT FROM" <VARIANT@EXAMPLE.ORG>',
       mosaicoTemplate: "",
       mosaicoMetadata: '{}',
       mosaicoContent: '{}'
