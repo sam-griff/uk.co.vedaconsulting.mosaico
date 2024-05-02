@@ -1,22 +1,18 @@
 <div class="form-inline" ng-if="!isSplit()">
   <div class="form-group">
     <span ng-controller="EmailAddrCtrl" crm-mailing-from-address="fromPlaceholder" crm-mailing="mailing">
-      <!--
-      For the following <select>, select2 would be nice. But width is weird in this context. Need CSS expert...
-      crm-ui-select="{dropdownAutoWidth : true, allowClear: false}"
-      -->
       <select
           id="inputFrom"
           class="form-control"
           name="fromAddress"
           ng-model="fromPlaceholder.label"
+          crm-ui-select="{width: '40em', dropdownAutoWidth : true, allowClear: false}"
           required>
         <option ng-repeat="frm in crmFromAddresses.getAll() | filter:{is_active:1} | orderBy:'weight'"
                 value="{{frm.label}}">{{frm.label}}
         </option>
       </select>
     </span>
-
     <a ng-click="addFrom()" class="btn btn-default" title="{{ts('Add alternate \'From\'')}}">
       <span><i class="crm-i fa-plus-circle"></i></span>
     </a>
@@ -28,15 +24,12 @@
     ({{labels[vid]}})
 
     <span ng-controller="EmailAddrCtrl" crm-mailing-from-address="fromPlaceholder" crm-mailing="variant">
-      <!--
-      For the following <select>, select2 would be nice. But width is weird in this context. Need CSS expert...
-      crm-ui-select="{dropdownAutoWidth : true, allowClear: false}"
-      -->
       <select
         crm-ui-id="subform.from"
         name="fromAddressA"
         class="form-control"
         ng-model="fromPlaceholder.label"
+        crm-ui-select="{width: '40em', dropdownAutoWidth : true, allowClear: false}"
         required>
         <option ng-repeat="frm in crmFromAddresses.getAll() | filter:{is_active:1} | orderBy:'weight'"
                 value="{{frm.label}}">{{frm.label}}

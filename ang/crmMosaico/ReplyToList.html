@@ -1,15 +1,13 @@
 <div class="form-inline" ng-if="!isSplit()">
   <div class="form-group">
     <span ng-controller="EmailAddrCtrl">
-      <!--
-      crm-ui-select="{dropdownAutoWidth : true, allowClear: true, placeholder: ts('Email address')}"
-      -->
       <select
         id="inputReplyTo"
         class="form-control"
         name="replyTo"
         ng-change="checkReplyToChange(mailing)"
         ng-model="mailing.replyto_email"
+        crm-ui-select="{width: '40em', dropdownAutoWidth : true, allowClear: true, placeholder: ts('Email address')}"
       >
         <option value="">(Email address)</option><!-- If you fix crm-ui-select, then this label can be emptied. It functions as placeholder text. -->
         <option ng-repeat="frm in crmFromAddresses.getAll() | filter:{is_active:1} | orderBy:'weight'" value="{{frm.label}}">{{frm.label}}</option>
@@ -27,15 +25,13 @@
     ({{labels[vid]}})
 
     <span ng-controller="EmailAddrCtrl">
-      <!--
-      crm-ui-select="{dropdownAutoWidth : true, allowClear: true, placeholder: ts('Email address')}"
-      -->
       <select
         id="inputReplyToA"
         class="form-control"
         name="replyToA"
         ng-change="checkReplyToChange(variant)"
         ng-model="variant.replyto_email"
+        crm-ui-select="{width: '40em', dropdownAutoWidth : true, allowClear: true, placeholder: ts('Email address')}"
       >
         <option value="">(Email address)</option><!-- If you fix crm-ui-select, then this label can be emptied. It functions as placeholder text. -->
         <option ng-repeat="frm in crmFromAddresses.getAll() | filter:{is_active:1} | orderBy:'weight'" value="{{frm.label}}">{{frm.label}}</option>
