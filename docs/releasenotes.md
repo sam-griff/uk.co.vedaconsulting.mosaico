@@ -1,6 +1,19 @@
 **DO NOT DOWNLOAD DIRECTLY FROM GITHUB**
 Download via [the extensions directory](https://civicrm.org/extensions/email-template-builder) as there are additional packaging requirements not handled by github.
 
+## Release 3.6 (2024-09-06)
+
+* Replace htmlspecialchars with escape (Smarty5 compatibility).
+* Refactor out call to deprecated CRM_Utils_Array::value
+* Permit install of composer-dowloads-plugin v4 to support php8.3.
+* "From" and "Reply-To" lists - (Re)Enable select2 support
+* Add A/B test for "Reply-To"
+* Add A/B testing for "From" address
+* AbDemuxTest - Add demonstration of "From" variants
+* Subject List - On the add/remove button, give clearer hint
+* Fix civicrmtoken error when `mosaicoConfig` hook is used
+* Fix settings path
+
 ## Release 3.5 (2024-03-01)
 
 * [#638](https://github.com/veda-consulting-company/uk.co.vedaconsulting.mosaico/pull/638) Fix issues with labels on template selection.
