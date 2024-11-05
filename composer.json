@@ -1,5 +1,6 @@
 {
   "name": "civipkg/uk.co.vedaconsulting.mosaico",
+  "type": "civicrm-ext",
   "require": {
     "intervention/image": "^2.4",
     "civicrm/composer-downloads-plugin": "^3.0 || ^4.0"
